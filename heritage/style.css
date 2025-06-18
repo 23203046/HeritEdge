@@ -1,0 +1,368 @@
+body {
+  margin: 0;
+  padding: 0;
+  height:auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: url('https://source.unsplash.com/1600x900/?temple'); /* Replace with your own image */
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #45a049;
+}
+
+#message {
+  margin-top: 15px;
+  color: red;
+}
+
+/* Navigation Bar Styles */
+.nav-bar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-bar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.nav-bar a:hover {
+  background-color: #4CAF50;
+  border-radius: 5px;
+}
+
+/* Utility class */
+.hidden {
+  display: none;
+}
+.temple-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.temple-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.temple-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.temple-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 10px;
+  text-align: center;
+}
+
+.temple-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.temple-card p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+
+/* Food Section */
+.food-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.food-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.food-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.food-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.food-card p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Order Form Styling */
+.order-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-form h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.order-form input,
+.order-form textarea {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.order-form textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+.order-form button {
+  padding: 10px 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-form button:hover {
+  background-color: #45a049;
+}
+
+
+
+/* Chatbot Section */
+.chatbot-section {
+  width: 90%;
+  max-width: 800px;
+  margin: 80px auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.chatbot-icon {
+  width: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.chat-container {
+  margin-top: 20px;
+}
+
+#userInput {
+  width: 90%;
+  max-width: 600px;
+  height: 80px;
+  padding: 10px;
+  font-size: 16px;
+  resize: vertical;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.chat-buttons {
+  margin-top: 10px;
+}
+
+.chat-buttons button {
+  padding: 8px 16px;
+  margin: 5px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.chat-buttons button:hover {
+  background-color: #45a049;
+}
+
+.chat-response {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f1f1f1;
+  border-radius: 10px;
+  font-size: 16px;
+  min-height: 50px;
+}
+
+
+.quiz-section {
+  width: 90%;
+  max-width: 800px;
+  margin: 80px auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.question-box {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.question-box h3 {
+  margin-bottom: 15px;
+}
+
+.question-box label {
+  display: block;
+  text-align: left;
+  margin: 5px 0;
+}
+
+.question-box button {
+  margin-top: 10px;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+
+
+
+.feedback-section {
+  width: 90%;
+  max-width: 600px;
+  margin: 100px auto 40px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.feedback-section textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.feedback-section button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.feedback-section button:hover {
+  background-color: #45a049;
+}
+
+#scoreChart {
+  max-width: 300px;
+  max-height: 300px;
+  margin: 0 auto; /* center it */
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+  <!-- Navigation Menu (hidden by default) -->
+  <div id="navBar" class="nav-bar hidden">
+    <a href="#" onclick="showSection('templeSection')">Temples</a>
+    <a href="#" onclick="showSection('foodSection')">Food</a>
+    <a href="#" onclick="showSection('chatbotSection')">AI Chatbot</a>
+    <a href="#" onclick="showSection('feedbackSection')">Feedback</a>
+    <a href="#" onclick="showSection('quizSection')">Quiz</a>
+  </div>
+
+  <!-- Login Form -->
+  <div class="login-container" id="loginContainer">
+    <h2>Login</h2>
+    <form onsubmit="return loginUser()">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+<!-- Temple Section (Hidden by Default) -->
+<div id="templeSection" class="temple-section hidden">
+  <h2>Famous Temples in Tamil Nadu</h2>
+  <div class="temple-grid">
+    <!-- Temple Cards -->
+    <div class="temple-card">
+      <img src="https://www.abhibus.com/blog/wp-content/uploads/2023/04/Madurai-Meenakshi-Temple-History-Timings-How-to-Reach-1024x604.jpg" alt="Meenakshi Temple">
+      <p><strong>Meenakshi Temple</strong> - Located in Madurai, famous for its stunning architecture and sculptures.</p>
+    </div>
+    <div class="temple-card">
+      <img src="https://media.istockphoto.com/id/1366763781/photo/brihadisvara-temple-thanjavur-tamil-nadu.jpg?s=612x612&w=0&k=20&c=3qXEjzW7u-3scYZp6K_ZekA9qZ3eSVmwOkYnB162yNs=" alt="Brihadeeswarar Temple">
+      <p><strong>Brihadeeswarar Temple</strong> - A UNESCO World Heritage site built by Raja Raja Chola in Thanjavur.</p>
+    </div>
+    <div class="temple-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfIRqcVEmT4HAM_IneXqaZkWndWqJDeO505A&s" alt="Ranganathaswamy Temple">
+      <p><strong>Srirangam Temple</strong> - Largest temple complex in India dedicated to Lord Vishnu.</p>
+    </div>
+    <div class="temple-card">
+      <img src="https://www.mrpilot.in/blog/wp-content/uploads/2020/01/Kapaleeshwarar-Temple-Chennai.jpg" alt="Kapaleeshwarar Temple">
+      <p><strong>Kapaleeshwarar Temple</strong> - A vibrant Shiva temple in Mylapore, Chennai.</p>
+    </div>
+    <div class="temple-card">
+      <img src="https://rameshwaramtourism.co.in/images/headers/sri-ramanathaswamy-temple-rameshwaram-tourism-header.jpg" alt="Ramanathaswamy Temple">
+      <p><strong>Ramanathaswamy Temple</strong> - Located on Rameswaram island, known for its long corridors.</p>
+    </div>
+    <div class="temple-card">
+      <img src="https://hindupost.in/wp-content/uploads/2020/08/Chidambaram.png" alt="Chidambaram Temple">
+      <p><strong>Chidambaram Temple</strong> - Famous for its Nataraja shrine and unique cosmic dance significance.</p>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Food Section (Hidden by Default) -->
+<div id="foodSection" class="food-section hidden">
+  <h2>Popular Tamil Nadu Foods</h2>
+  <div class="food-grid">
+    <div class="food-card">
+      <img src="https://www.awesomecuisine.com/wp-content/uploads/2009/06/Plain-Dosa.jpg" alt="Dosa">
+      <p><strong>Dosa</strong> - A crispy pancake made from rice batter and black lentils.</p>
+    </div>
+    <div class="food-card">
+      <img src="https://cdn.prod.website-files.com/64931d2aee18510b47f4bb1f/65ca51ff5da9211e1a4c1454_Idli-Recipe-Cover-Image.jpg" alt="Idli">
+      <p><strong>Idli</strong> - Soft rice cakes served with sambar and chutney.</p>
+    </div>
+    <div class="food-card">
+      <img src="https://media.assettype.com/homegrown/import/book/kuhwlbayxs-1533040300.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true" alt="Thali">
+      <p><strong>South Indian Thali</strong> - A variety of vegetarian dishes served on a single plate.</p>
+    </div>
+    <div class="food-card">
+      <img src="https://www.zaiqathespicestore.com/cdn/shop/products/chicken65-free.png?v=1714742169" alt="Chicken 65">
+      <p><strong>Chicken 65</strong> - Spicy deep-fried chicken snack.</p>
+    </div>
+    <div class="food-card">
+      <img src="https://img.onmanorama.com/content/dam/mm/en/food/features/images/2024/3/23/sambar.jpg?w=1120&h=583" alt="Sambar">
+      <p><strong>Sambar</strong> - A flavorful lentil-based vegetable stew.</p>
+    </div>
+    <div class="food-card">
+      <img src="https://www.spiceindiaonline.com/wp-content/uploads/2014/01/Ven-Pongal-3.jpg" alt="Pongal">
+      <p><strong>Pongal</strong> - A popular rice dish made during harvest festival.</p>
+    </div>
+  </div>
+
+  <!-- Food Order Form -->
+  <form class="order-form" onsubmit="return placeOrder()">
+    <h3>Place Your Order</h3>
+    <input type="text" id="custName" placeholder="Your Name" required />
+    <input type="text" id="foodName" placeholder="Food Name" required />
+    <input type="number" id="quantity" placeholder="Number of Items" required />
+    <textarea id="address" placeholder="Delivery Address" required></textarea>
+    <button type="submit">Submit Order</button>
+  </form>
+</div>
+
+<!-- Chatbot Section -->
+<div id="chatbotSection" class="hidden chatbot-section">
+  <h2><img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" class="chatbot-icon" alt="Chatbot Icon"> Tamil Nadu Heritage Chatbot</h2>
+  
+  <div class="chat-container">
+    <textarea id="userInput" placeholder="Ask about Tamil Nadu's heritage..."></textarea>
+    <div class="chat-buttons">
+      <button onclick="sendMessage()">Send</button>
+      <button onclick="startListening()">🎤 Speak</button>
+    </div>
+    <div id="chatResponse" class="chat-response"></div>
+  </div>
+</div>
+
+
+<!-- Quiz Section -->
+<div id="quizSection" class="hidden quiz-section">
+  <h2>🧠 Tamil Nadu Heritage Quiz</h2>
+  <div id="quizContainer">
+    <!-- Questions inserted by JavaScript -->
+  </div>
+  <div id="scoreChartContainer" class="hidden">
+    <canvas id="scoreChart" width="300" height="300"></canvas>
+  </div>
+</div>
+
+
+<!-- Feedback Section -->
+<div id="feedbackSection" class="section feedback-section hidden">
+  <h2>Feedback</h2>
+  <form onsubmit="handleFeedbackSubmit(event)">
+    <textarea id="feedbackText" placeholder="Enter your feedback here..." required></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+
+
+
+  <script src="script.js"></script>
+
+
+
+
+</body>
+</html>
+
+</html>
